@@ -1,0 +1,76 @@
+
+
+.card {
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #000000;
+}
+.messages {
+  height: 400px;
+  overflow-y: scroll;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.message {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 10px;
+}
+.message.self {
+  text-align: right;
+  background-color: #e0ffe0;
+  align-self: flex-end;
+  border-radius: 10px 0 10px 10px;
+   border: 2px solid #000000;
+}
+.message.other {
+  text-align: left;
+  background-color: #ffe0e0;
+  align-self: flex-start;
+  border-radius: 0 10px 10px 10px;
+  border: 2px solid #000000;
+}
+.input-container {
+  display: flex;
+  justify-content: space-between;
+}
+.input-container input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+}
+.input-container button {
+  padding: 10px;
+  width: 20%;
+  margin-left: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.status {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+.online {
+  color: green;
+  font-weight: bold;
+  font-style: italic;
+}
+.offline {
+  color: red;
+  font-weight: bold;
+  font-style: italic;
+}
+
+i {
+  margin-right: 10px;
+}

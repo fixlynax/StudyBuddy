@@ -1,0 +1,171 @@
+.card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 2px solid #000000;
+}
+
+.card p {
+  margin-bottom: 5px;
+  display:inline-block;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+p1 {
+  margin-bottom: 15px;
+  display:inline-block;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+span1{
+    color: #010309;
+}
+
+
+.card span{
+    color: #e2a728;
+}
+
+.card a, .card b {
+  margin-bottom: 15px;
+  display:grid;
+  font-size: 24px;
+  color: #e2a728;
+  font-weight: bold;
+}
+
+.card labelD {
+  font-weight: bold;
+}
+
+.card.resource labelD {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.card.resource input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #e2a728;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.card.resource .button.search {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #e2a728;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.card table {
+  /* width: 100%; */
+  border-collapse: separate;
+  width: 100%;
+}
+
+.card.resource th {
+  padding: 5px 10px;
+}
+
+.card.resource td {
+  padding-left: 5px;
+}
+
+
+.card th,
+.card td {
+  text-align: left;
+  border: 2px solid #000000;
+}
+
+.card th:first-child,
+.card td:first-child {
+  width: fit-content; /* Adjust as needed for image column width */
+}
+
+.button.logout {
+  background-color: #e2a728;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-bottom: 10px ;
+  cursor: pointer;
+  float: right;
+  font-size: 15px;
+}
+
+.logout{
+  position: relative;
+  top: -20px;
+}
+
+.button.logout:hover {
+  background-color: #d82e2e;
+}
+
+.name {
+  color: #f1be66;
+}
+
+.card .view-button,
+.card .download-button,
+.card .delete-button{
+    display: inline-block;
+    padding: 10px 30px;
+    margin-right: 8px;
+    margin-top: 12px;
+    color: #fff;
+    background-color: #e2a728;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: normal;
+    transition: background-color 0.3s ease;
+}
+
+
+.card .view-button:hover{
+opacity: 0.8;
+background-color: #28e241;
+}
+
+.card .download-button:hover{
+opacity: 0.8;
+background-color: #2834e2;
+}
+
+.card .delete-button:hover {
+  opacity: 0.8;
+  background-color: #e22828;
+}
+
+img {
+  
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+/* Green color for Accepted status */
+.accepted {
+  color: green;
+}
+
+/* Red color for Rejected status */
+.rejected {
+  color: red;
+}
+

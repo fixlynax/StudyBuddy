@@ -1,0 +1,81 @@
+.card {
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border: 2px solid #000000;
+}
+
+
+.card h2 {
+  margin-bottom: 10px;
+  color: #66B1F1;
+}
+
+.card labelS {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* CSS for buttons */
+.card .button {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #66b1f1;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.card .button:hover {
+  background-color: #6f90b5;
+}
+
+.card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.card th,
+.card td {
+  padding: 10px;
+  text-align: left;
+  border: 2px solid #000000; 
+}
+
+.card th:first-child,
+.card td:first-child {
+  width: auto; 
+  height: 60px;
+}
+
+/* CSS for form inputs */
+input[type="text"], input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #66b1f1;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.finish-button {
+  display: inline-block;
+  padding: 11px 20px;
+  background-color: rgb(199, 52, 52);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.status-text {
+  font-weight: bold;
+}

@@ -1,0 +1,64 @@
+/* CSS for Create Study Group card */
+
+.card {
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border: 2px solid #000000;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: #66B1F1;
+}
+
+.card labelS {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.card input[type="text"],
+.card select,
+.card textarea,
+.card input[type="date"],
+.card input[type="time"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 2px solid #66b1f1;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.card .submit-button,
+.card .show-button {
+  border: none;
+  margin-top: 10px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+}
+
+.card .show-button a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.card .submit-button {
+  background-color: #66b1f1;
+}
+
+.card .show-button {
+  background-color: #66b1f1;
+}
+
+.card .submit-button:hover,
+.card .show-button:hover {
+  opacity: 0.8;
+}

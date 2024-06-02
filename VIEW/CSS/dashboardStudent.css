@@ -1,0 +1,359 @@
+.card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 2px solid #000000;
+}
+
+.card p {
+  margin-bottom: 5px;
+  display:inline-block;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+p1 {
+  margin-bottom: 15px;
+  display:inline-block;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+span1{
+    color: #010309;
+}
+
+
+.card span{
+    color: #66B1F1;
+}
+
+.card a, .card b {
+  margin-bottom: 15px;
+  display:grid;
+  font-size: 24px;
+  color: #66B1F1;
+  font-weight: bold;
+}
+
+.card labelD {
+  font-weight: bold;
+}
+
+.card.resource labelD {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.card.resource input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #66B1F1;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.card.resource .button.search {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #66b1f1;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.card table {
+  /* width: 100%; */
+  border-collapse: separate;
+  width: 100%;
+}
+
+.card th {
+  padding: 5px 10px;
+}
+
+.card td {
+  padding: 5px;
+}
+
+.card th,
+.card td {
+  text-align: left;
+  border: 2px solid #000000;
+  width: fit-content;
+}
+
+.button.logout {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-bottom: 10px ;
+  cursor: pointer;
+  float: right;
+  font-size: 15px;
+}
+
+.logout{
+  position: relative;
+  top: -20px;
+}
+
+.button.logout:hover {
+  background-color: #d82e2e;
+}
+
+.name {
+  color: #66b1f1;
+}
+
+.card .view-button,
+.card .download-button {
+    display: inline-block;
+    padding: 10px 30px;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.card .rate-button {
+  display: inline-block;
+  padding: 10px 30px;
+  margin-right: 8px;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  text-decoration: none;
+  border:none;
+  font-size: 15px;
+  font-weight: normal;
+  transition: background-color 0.3s ease;
+}
+
+.card .rate-button:hover {
+  background-color: #2ed83c;
+}
+
+.card .action-button-accept,
+.card .action-button-reject {
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: normal;
+  text-decoration: none; 
+  text-align: center;
+
+}
+
+.card .action-button-accept {
+  background-color: #4ae277;
+  padding: 10px 30px;
+  margin-top: 14px;
+  color: #fff;
+  border: none;
+}
+
+.card .action-button-reject {
+  background-color: rgb(252, 58, 58);
+  margin-top: 14px;
+  margin-bottom: 14px;
+  padding: 10px 34px;
+  color: #fff;
+  border: none;
+}
+
+.card .view-button {
+  background-color: #66b1f1;
+  margin-top: 14px;
+  margin-left: 4px;
+  padding: 10px 50px;
+  color: #fff;
+  border: none;
+}
+
+.card .download-button {
+  background-color: rgb(252, 58, 58);
+  color: #fff;
+  border: none;
+}
+
+.card .view-button:hover,
+.card .delete-button:hover {
+  opacity: 0.8;
+}
+
+img {
+  
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+/* Green color for Accepted status */
+.accepted {
+  color: green;
+}
+
+/* Red color for Rejected status */
+.rejected {
+  color: red;
+}
+
+.chatbox-button {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border-radius: 20px 25px 0px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.chatbox-button:hover{
+  background-color: #ff00c8;
+}
+
+.chat-popup {
+    display: none;
+    background-color: white;
+    border: 2px solid #000000;
+    /* border-radius: 8px; */
+    border-radius: 10px 10px 0px;
+    padding: 10px;
+    position: absolute;
+    bottom: 40px;
+    right: 25px;
+    width: 250px;
+}
+
+.chatbox {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: white;
+    border: 2px solid #000000;
+    /* border-radius: 8px; */border-radius: 10px 10px 0px;
+    margin-left: 40px;
+    width: auto;
+    height: auto;
+    z-index: 1000;
+}
+
+.chatbox-content {
+    padding: 10px;
+    color:#000000;
+}
+
+.chatbox .close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#answer{
+
+  color:#000000
+}
+
+#chatboxButton .chat-popup {
+    animation: fadeInOut 10s infinite;
+}
+
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    10%, 90% { opacity: 1; }
+}
+
+.buttonOption {
+  background-color: #66b1f1; 
+  border: 2px solid #000000; 
+  border-radius: 8px;
+  padding: 8px;
+  color:#fff;
+  font-size: 15px;
+  margin-bottom: 5px;
+  
+}
+
+.buttonOption:hover{
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+.headerChatbox{
+  color:#000000;
+  margin-bottom: 5px;
+}
+
+/* ------------------------- */
+/* 
+.draggable-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 20px 20px 0px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.chat-popup {
+    display: none;
+    background-color: white;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    padding: 10px;
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    width: 200px;
+}
+
+.chatbox {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 60px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    width: 300px;
+    height: 200px;
+    z-index: 1000;
+}
+
+.chatbox-content {
+    padding: 10px;
+}
+
+.chatbox .close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#chatboxButton .chat-popup {
+    animation: fadeInOut 20s infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    10%, 90% { opacity: 1; }
+}
+ */

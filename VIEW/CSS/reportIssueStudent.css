@@ -1,0 +1,80 @@
+.card {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border: 2px solid #000000;
+}
+
+.card h2 {
+  /* font-size: 24px; */
+  margin-bottom: 15px;
+  color: #66B1F1;
+}
+
+.card labelI {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.card select,
+.card input[type="file"],
+.card textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  border: 2px solid #66B1F1;
+}
+
+.card button {
+  background-color: #66B1F1;
+  color: #fff;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.table-container {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  /* border-style:dashed; */
+  border-collapse: separate;
+  /* border-collapse: collapse; */
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+  border: 2px solid #000000;
+}
+
+.status-pending {
+  color: orange;
+  font-weight: bold;
+}
+
+.status-in-program {
+  color: blue;
+  font-weight: bold;
+}
+
+.status-accept {
+  color: green;
+  font-weight: bold;
+}
+
+.status-onhold {
+  color: red;
+  font-weight: bold;
+}

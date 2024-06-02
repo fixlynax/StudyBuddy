@@ -1,0 +1,83 @@
+/* CSS for List Study Partner card */
+
+.card {
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border: 2px solid #000000;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: #66B1F1;
+}
+
+.card labelP {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.card input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 2px solid #66B1F1;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.card button.find-button {
+  background-color: #66b1f1;
+  color: #fff;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.card button.find-button:hover {
+  background-color: #4d8ac9;
+}
+
+.card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.card th,
+.card td {
+  padding: 10px;
+  text-align: center;
+  border: 2px solid #000000;
+}
+
+.card th:first-child,
+.card td:first-child {
+  width: auto; /* Adjust as needed for image column width */
+}
+
+.card .rounded-image {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.card button.chat-button {
+  background-color: #66b1f1;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button.chat-button:hover {
+  background-color: #4d8ac9;
+}

@@ -1,0 +1,93 @@
+/* Card Styles */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+  border: 2px solid #000000;
+}
+
+.card h2 {
+    color: #ce8532;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: l;
+}
+
+.card h3 {
+    color: #000000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: l;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+labelE {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 2px solid #ce8532;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+  outline: none;
+  border-color: #000000;
+}
+
+button {
+  background-color: #ce8532;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: #f7b93d;
+}
+
+.form-group {
+  position: relative;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group input {
+    padding-right: 30px; /* Space for the icon */
+}
+
+.toggle-password {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.toggle-password i {
+    color: #000000;
+    font-size: 17px;
+}

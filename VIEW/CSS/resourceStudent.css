@@ -1,0 +1,94 @@
+.upload-card {
+    margin-top: 30px;
+    border: 2px solid #000000;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.upload-card h2 {
+    color: #66B1F1;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.card labelR {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.card input[type="text"],
+.card textarea,
+.card select {
+    width: 100%;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 2px solid #66B1F1;
+    font-size: 16px;
+}
+
+.file-input-container {
+    position: relative;
+}
+
+.file-input-container input[type="file"] {
+    /* display: none; */
+    width: 100%;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 2px solid #66B1F1;
+    font-size: 15px;
+}
+
+.upload-label {
+    cursor: pointer;
+    color: #000000;
+    margin-top: 20px;
+}
+
+.des-label {
+    margin-top: 20px;
+}
+
+.upload-icon {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #66B1F1;
+    cursor: pointer;
+    border: 1px solid #000000;
+}
+
+.upload-button,
+.show-resource-button {
+    background-color: #66B1F1;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.show-resource-button a {
+      text-decoration: none; 
+      color: inherit; 
+    }
+
+.upload-button:hover,
+.show-resource-button:hover {
+    background-color: #4D9EDC;
+}

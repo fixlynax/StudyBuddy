@@ -1,0 +1,81 @@
+.online {
+  color: green;
+}
+
+.offline {
+  color: red;
+}
+
+.card h2 {
+    color: #66B1F1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: l;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.chat-button {
+  padding: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card {
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #000000;
+}
+
+.chat-button i {
+  margin-right: 5px;
+}
+
+.card table {
+  width: 100%;
+  border-collapse: separate;
+}
+
+.card th,
+.card td {
+  padding: 5px;
+  text-align: center;
+  border: 2px solid #000000;
+}
+
+.card th:first-child,
+.card td:first-child {
+  width: auto;
+  /* Adjust as needed for image column width */
+}
+
+.card .chat-button {
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.card .chat-button:hover {
+  opacity: 0.8;
+  background-color: green;
+}
+
+i{
+  margin-right: 10px;
+}

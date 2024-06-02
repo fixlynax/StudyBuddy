@@ -1,0 +1,60 @@
+/* Custom CSS for card styles */
+.card {
+  background-color: #f7f7f7;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.card h2 {
+    color: #ce8532;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: l;
+}
+
+.card h3 {
+    color: #ce8532;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: l;
+    font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+labelD {
+  display: block;
+  font-weight: bold;
+}
+
+select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 2px solid #ce8532;
+  font-size: 17px;
+}
+
+button {
+  background-color: #ce8532;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button.active:hover {
+    background-color: green; /* Change text color to red on hover */
+}
+
+button.Deactivate:hover {
+    background-color: red; /* Change text color to red on hover */
+}

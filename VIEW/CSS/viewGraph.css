@@ -1,0 +1,41 @@
+.padding-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border: 2px solid #000000;
+    width: calc(25% - 20px); /* Adjust width based on your layout */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+h2{
+    margin-bottom: 10px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #e2a728;
+    border-radius: 8px;
+}
+
+.card .button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #e2a728;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.card .button:hover {
+    background: #0056b3;
+}

@@ -1,0 +1,91 @@
+/* CSS for List Uploaded Resource card */
+
+.card {
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border: 2px solid #000000;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: #66b1f1;
+}
+
+.card labelR {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.card input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 2px solid #66b1f1;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.card button.find-button {
+  background-color: #66b1f1;
+  color: #fff;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.card button.find-button:hover {
+  background-color: #4d8ac9;
+}
+
+.card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.card th,
+.card td {
+  padding: 10px;
+  text-align: center;
+  border: 2px solid #000000;
+}
+
+.card th:first-child,
+.card td:first-child {
+  width: auto; /* Adjust as needed for image column width */
+  height: 60px;
+}
+
+.card .view-button,
+.card .delete-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  text-decoration: none; 
+}
+
+.card .view-button {
+  background-color: #66b1f1;
+  margin-right: 8px;
+  color: #fff;
+  border: none;
+}
+
+.card .delete-button {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+}
+
+.card .view-button:hover,
+.card .delete-button:hover {
+  opacity: 0.8;
+}
