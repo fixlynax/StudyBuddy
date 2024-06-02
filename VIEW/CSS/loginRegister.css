@@ -8,8 +8,8 @@ body {
     /* background: #65e5df; */
     background-image: url('/VIEW/Images/bg1.jpg');
     background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: auto; 
+    background-repeat:no-repeat; 
+    background-size:210vh 110vh; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,6 @@ body {
     height: 100vh;
     margin: -20px 0 50px;
 }
-
 h1 {
     font-weight: bold;
     margin: 0;
@@ -49,8 +48,8 @@ a {
 
 button {
     border-radius: 20px;
-    border: 1px solid #66B1F1;
-    background-color: #66B1F1;
+    border: 1px solid #ffffff;
+    background-color: #dd9b45;
     color: #FFFFFF;
     font-size: 12px;
     font-weight: bold;
