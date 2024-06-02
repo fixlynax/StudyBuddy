@@ -36,7 +36,8 @@
         <h2>Report Issue</h2>
         <form action="reportIssueStudentHandler.php" method="POST" enctype="multipart/form-data">
             <labelI for="typeIssue">Type Issue</labelI>
-            <select id="typeIssue" name="typeIssue">
+            <select id="typeIssue" name="typeIssue" required>
+                <option style="font-style: italic;" value="">Select Type..</option>
                 <option value="bug">Bug</option>
                 <option value="feature">Feature Request</option>
                 <option value="other">Other</option>
@@ -44,7 +45,7 @@
             <labelI for="pictureIssue">Picture Issue</labelI>
             <input type="file" id="pictureIssue" name="pictureIssue" accept="image/*">
             <labelI for="description">Description</labelI>
-            <textarea id="description" name="description" rows="4"></textarea>
+            <textarea id="description" name="description" rows="4" placeholder="Enter report description.." required></textarea>
             <button class="submit-button" type="submit">Submit</button>
         </form>
     </div> 

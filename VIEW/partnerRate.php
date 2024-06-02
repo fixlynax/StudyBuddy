@@ -55,7 +55,7 @@ include './MODEL/connect.php';
                         <labelS for="rating">1 : </labelR>
                         <input type="radio" name="star" value="1" id="star5"><label for="star5" class="fa fa-star"></label>
                     </div>
-                    <button type="submit">Submit Rating</button>
+                    <button type="submit">Submit</button>
                 </form>
             </div>
         </div>

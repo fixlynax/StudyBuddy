@@ -36,8 +36,8 @@
           <h2>Activate User</h2>
           <div class="form-group">
             <labelD for="selectUserActivate">User</labelD>
-            <select id="selectUserActivate">
-              <option style="font-style: italic;" value="">Select User</option>
+            <select id="selectUserActivate" required>
+              <option style="font-style: italic;" value="">Select User..</option>
               <!-- Options will be populated by JavaScript -->
             </select>
           </div>
@@ -47,12 +47,12 @@
           <h3>Deactivate User</h3>
           <div class="form-group">
             <labelD for="selectUserDeactivate">User</labelD>
-            <select id="selectUserDeactivate">
-              <option style="font-style: italic;" value="">Select User</option>
+            <select id="selectUserDeactivate" required>
+              <option style="font-style: italic;" value="">Select User..</option>
               <!-- Options will be populated by JavaScript -->
             </select>
             <labelD style="margin-top:10px" for="description" class="des-label">Description</labelD>
-            <textarea id="description" name="description" rows="4" required></textarea>
+            <textarea id="description" name="description" rows="4" placeholder="Enter description for reason.."></textarea>
           </div>
           <button class="Deactivate" id="deactivateButton">Deactivate</button>
         </div>

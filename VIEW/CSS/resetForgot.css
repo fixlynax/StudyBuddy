@@ -9,7 +9,7 @@ body {
     background-image: url('/VIEW/Images/bg1.jpg');
     background-position: center; 
     background-repeat: no-repeat; 
-    background-size: auto; 
+    background-size:210vh 110vh; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +39,7 @@ button {
 
 /* Card Styles */
 .card {
-    width: auto;
+    width: 500px;
     padding: 30px;
     background-color: #fff;
     border: 2px solid #000000;
@@ -61,7 +61,7 @@ button {
 
 .card input {
     width: 100%;
-    padding: 8px 16px;
+    padding: 8px 30px;
     margin-bottom: 15px;
     border: 2px solid #431904;
     border-radius: 5px;

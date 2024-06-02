@@ -35,7 +35,7 @@
             <div class="card">
                 <h2>List Add Subject</h2>
                  <labelP for="subjectSearch">Search by subject</labelP>
-                <input type="text" id="subjectSearch" name="subjectSearch" onkeyup="searchSubjects()">
+                <input type="text" id="subjectSearch" name="subjectSearch" placeholder="Enter subject name to search.." onkeyup="searchSubjects()">
                 <!-- important for search without button -->
 
                 <table>

@@ -35,7 +35,7 @@
                 <div class="card">
                     <h2>List Study Group</h2>
                     <labelS for="searchType">Search by status</labelS>
-                    <input type="text" id="searchType" class="input-field" placeholder="Enter type..."
+                    <input type="text" id="searchType" class="input-field" placeholder="Enter status to search..."
                         onkeyup="filterTable()">
                     <table class="table" id="studyGroupTable">
                         <thead>

@@ -36,11 +36,11 @@
           <h2>Create Study Group</h2>
           <form method="POST" action="createStudyGroup.php">
             <labelS for="studyGroupName">Study Group Name</labelS>
-            <input type="text" id="studyGroupName" name="studyGroupName" required>
+            <input type="text" id="studyGroupName" name="studyGroupName" placeholder="Enter group name.." required>
 
             <labelS for="typeStudyGroup">Type Study Group</labelS>
             <select id="typeStudyGroup" name="typeStudyGroup" required>
-              <option style="font-style: italic;" value="">Select type</option>
+              <option style="font-style: italic;" value="">Select type..</option>
               <option value="Zoom">Online by Zoom</option>
               <option value="Google Meet">Online by Google Meet</option>
               <option value="Microsoft Team">Online by Microsoft Team</option>
@@ -49,7 +49,7 @@
             </select>
 
             <labelS for="description">Description</labelS>
-            <textarea id="description" name="description" rows="4" required></textarea>
+            <textarea id="description" name="description" rows="4" placeholder="Enter group description.." required></textarea>
 
             <labelS for="date">Date</labelS>
             <input type="date" id="date" name="date" required>
@@ -59,7 +59,7 @@
 
             <labelS for="studyPartner">Study Partner with Subject</labelS>
             <select id="studyPartner" name="studyPartner" required>
-              <option style="font-style: italic;" value="">Select Partner</option>
+              <option style="font-style: italic;" value="">Select Partner..</option>
               <?php include './CONTROLLER/dropdownPartnerAndSubject.php'; ?>
             </select>
             <input type="hidden" id="studySubjectID" name="studySubjectID" required>

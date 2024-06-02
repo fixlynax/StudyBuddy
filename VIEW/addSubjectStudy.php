@@ -37,12 +37,12 @@
                     <form action="addSubjectStudyHandler.php" method="POST">
                         <labelS for="subject">Subject</labelS>
                         <select id="subject" name="subject">
-                           <option style="font-style: italic;" value="">Select subject</option>
+                           <option style="font-style: italic;" value="">Select subject..</option>
                            <?php include "./CONTROLLER/dropdownSubject.php"; ?> 
                         </select>
                         <labelS for="description">Description</labelS>
-                        <textarea id="description" name="description" rows="4"></textarea>
-                        <labelS for="schedule">Schedule</labelS>
+                        <textarea id="description" name="description" rows="4" placeholder="Enter the description.."></textarea>
+                        <labelS for="schedule">Schedule<i style="font-weight:lighter">(*at least 7 days after the current date)</i></labelS>
                         <input type="date" id="schedule" name="schedule">
                         <button class="add-button" type="submit">Add</button>
                         <!-- <button class="show-button" type="submit">Show Subject Added</button> -->

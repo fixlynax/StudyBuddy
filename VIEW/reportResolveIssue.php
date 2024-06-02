@@ -16,7 +16,7 @@
     <aside class="side_bar">
       <div class="title">
         <div class="logo">StudyBuddy</div>
-        <label class=" button cancel" for="check"><i class="fas fa-times"></i></label>
+        <label class="button cancel" for="check"><i class="fas fa-times"></i></label>
       </div>
       <ul>
         <?php
@@ -39,6 +39,7 @@
               <tr>
                 <th>Report Type</th>
                 <th>Description</th>
+                <th>Picture</th>
                 <th>Report by</th>
                 <th>Issue Date</th>
                 <th>Resolve Status</th>
@@ -61,8 +62,8 @@
                 <th>Description</th>
                 <th>Report by</th>
                 <th>Issue Date</th>
-                <th>Resolve Status</th>
                 <th>Resolve Date</th>
+                <th>Resolve Status</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -102,6 +103,7 @@
             row.innerHTML = `
                             <td>${issue.reportType}</td>
                             <td>${issue.reportDescription}</td>
+                            <td style="text-align:center;"><a href="${issue.reportPicture}" target="_blank"><i class="fas fa-image"></i></a></td>
                             <td>${issue.reportBy}</td>
                             <td>${issue.reportDate}</td>
                             <td class="${getStatusClass(issue.reportStatus)}">${issue.reportStatus}</td>
@@ -112,6 +114,30 @@
           document.querySelectorAll('.update-btn').forEach(button => {
             button.addEventListener('click', function () {
               openModal(button.dataset.id, button.dataset.status);
+            });
+          });
+        });
+
+      fetch('getResolvedIssues.php')
+        .then(response => response.json())
+        .then(data => {
+          let issueTableBody2 = document.getElementById('issueTableBody2');
+          data.forEach(issue => {
+            let row = document.createElement('tr');
+            row.innerHTML = `
+                            <td>${issue.reportType}</td>
+                            <td>${issue.reportDescription}</td>
+                            <td>${issue.reportBy}</td>
+                            <td>${issue.reportDate}</td>
+                            <td>${issue.resolveDate}</td>
+                            <td class="${getStatusClass(issue.reportStatus)}">${issue.reportStatus}</td>
+                            <td><button class="view-btn" data-id="${issue.reportIssueID}">View</button></td>
+                        `;
+            issueTableBody2.appendChild(row);
+          });
+          document.querySelectorAll('.view-btn').forEach(button => {
+            button.addEventListener('click', function () {
+              viewIssueDetails(button.dataset.id);
             });
           });
         });
@@ -179,36 +205,11 @@
         });
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
-      fetch('getResolvedIssues.php')
-        .then(response => response.json())
-        .then(data => {
-          let issueTableBody2 = document.getElementById('issueTableBody2');
-          data.forEach(issue => {
-            let row = document.createElement('tr');
-            row.innerHTML = `
-                            <td>${issue.reportType}</td>
-                            <td>${issue.reportDescription}</td>
-                            <td>${issue.reportBy}</td>
-                            <td>${issue.reportDate}</td>
-                            <td>${issue.resolveDate}</td>
-                            <td class="${getStatusClass(issue.reportStatus)}">${issue.reportStatus}</td>
-                            <td><button class="view-btn" data-id="${issue.reportIssueID}">View</button></td>
-                        `;
-            issueTableBody2.appendChild(row);
-          });
-          document.querySelectorAll('.view-btn').forEach(button => {
-            button.addEventListener('click', function () {
-              viewIssueDetails(button.dataset.id);
-            });
-          });
-        });
-    });
-
     function viewIssueDetails(issueID) {
       // Implement the logic to view issue details if necessary
       alert('Viewing details for issue ID: ' + issueID);
     }
+
     function getStatusClass(status) {
       switch (status) {
         case 'Pending':
@@ -223,7 +224,6 @@
           return '';
       }
     }
-
   </script>
   <script src="JS/sidebar.js"></script>
 </body>

@@ -147,12 +147,12 @@ mysqli_close($conn);
                 <div class="form-group">
                     <labelE for="select-subject">Select Course</labelE>
                     <select id="selectcourse" name="courseID" required>
-                        <option style="font-style: italic;" value="">Select Course</option>
+                        <option style="font-style: italic;" value="">Select Course..</option>
                         <?php while ($row = mysqli_fetch_assoc($courses)): ?>
                                     <option value="<?= $row['courseName'] ?>"><?= $row['courseName'] ?></option>
                                 <?php endwhile; ?>
                             </select>
-                            <input type="text" id="subject" name="subject" placeholder="Type a name of subject... eg: Software Bester" required>
+                            <input type="text" id="subject" name="subject" placeholder="Type a name of subject.. eg: Software Bester" required>
                             <button type="submit" name="submitSubject">Submit</button>
                         </div>
                     </form>
@@ -162,7 +162,7 @@ mysqli_close($conn);
                     <form method="POST" action="">
                         <div class="form-group">
                             <labelE for="select-course">Course</labelE>
-                            <input type="text" id="course" name="course" placeholder="Type a name of course..." required>
+                            <input type="text" id="course" name="course" placeholder="Type a name of course.." required>
                             <button type="submit" name="submitCourse">Submit</button>
                         </div>
                     </form>

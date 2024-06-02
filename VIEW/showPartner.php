@@ -37,7 +37,7 @@ include './MODEL/connect.php';
                 <div class="card">
                 <h2>List Study Partner</h2>
                 <labelP for="subjectSearch">Search by subject</labelP>
-                <input type="text" id="subjectSearch" name="subjectSearch">
+                <input type="text" id="subjectSearch" name="subjectSearch" placeholder="Enter subject study to serach..">
                 <button class="find-button">Find</button>
 
                 <table>

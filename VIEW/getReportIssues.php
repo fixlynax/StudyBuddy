@@ -1,7 +1,7 @@
 <?php
 include './MODEL/connect.php';
 
-$sql = "SELECT reportissue.reportIssueID, reportissue.reportType, reportissue.reportDescription, student.stdName as reportBy, reportissue.reportDate, reportissue.reportStatus 
+$sql = "SELECT reportissue.reportIssueID, reportissue.reportType, reportissue.reportDescription, reportissue.reportPicture, student.stdName as reportBy, reportissue.reportDate, reportissue.reportStatus 
         FROM reportissue 
         JOIN student ON reportissue.reportBy = student.stdID
         WHERE reportStatus IN ('Pending', 'In Progress', 'On Hold')";

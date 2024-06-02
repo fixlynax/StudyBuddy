@@ -37,7 +37,7 @@
                     <h2>Upload Resource</h2>
                     <div class="card">
                         <labelR for="topicName">Topic Name</labelR>
-                        <input type="text" id="topicName" name="topicName" required>
+                        <input type="text" id="topicName" name="topicName" placeholder="Enter the topic name.." required>
 
                         <labelR for="category">Category</labelR>
                         <select id="category" name="category" required>
@@ -66,7 +66,7 @@
                         </div>
 
                         <labelR for="description" class="des-label">Description</labelR>
-                        <textarea id="description" name="description" rows="4" required></textarea>
+                        <textarea id="description" name="description" rows="4" placeholder="Enter the description.." required></textarea>
 
                         <input type="submit" name="upload" value="Upload" class="upload-button">
                         <button class="show-resource-button"><a href="showResource.php">Show Resources</a></button>
