@@ -65,6 +65,7 @@ mysqli_close($conn);
 <head>
     <meta charset="UTF-8">
     <title>Subject Course</title>
+    <link rel="icon" href="Images/icon.png" type="image/icon type">
     <link rel="stylesheet" href="CSS/sidebar.css">
     <link rel="stylesheet" href="CSS/editUserDetail.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />

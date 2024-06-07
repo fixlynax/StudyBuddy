@@ -15,7 +15,7 @@
     <section class="container">
         <aside class="side_bar">
             <div class="title">
-                <div class="logo">StudyBuddy</div>
+                <div href="dashboardAdmin.php" class="logo">StudyBuddy</div>
                 <label class=" button cancel" for="check"><i class="fas fa-times"></i></label>
             </div>
             <ul>
@@ -38,8 +38,11 @@
             <labelI for="typeIssue">Type Issue</labelI>
             <select id="typeIssue" name="typeIssue" required>
                 <option style="font-style: italic;" value="">Select Type..</option>
-                <option value="bug">Bug</option>
-                <option value="feature">Feature Request</option>
+                <option value="Bug">Bug</option>
+                <option value="Feature Request">Feature Request</option>
+                <option value="Study Partner">Study Partner</option>
+                <option value="Resource">Resource</option>
+                <option value="Subject Request">Subject Request</option>
                 <option value="other">Other</option>
             </select>
             <labelI for="pictureIssue">Picture Issue</labelI>

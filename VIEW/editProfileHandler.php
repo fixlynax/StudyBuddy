@@ -33,6 +33,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit'])) {
         exit();
     }
 
+    // Check if the matriculation number already exists in the database
+    $sql_check_matric = "SELECT * FROM student WHERE stdMatric='$matric' AND stdID != {$_SESSION['stdID']}";
+    $result_check_matric = mysqli_query($conn, $sql_check_matric);
+
+    if (mysqli_num_rows($result_check_matric) > 0) {
+        // Matriculation number already exists
+        echo '<script>alert("This matric number is already taken or registered. Please use a different matric."); window.location.replace("editProfileStudent.php");</script>';
+        exit();
+    }
+
     // Validate the password length and complexity
     if (strlen($password) < 8 || !preg_match('/[A-Za-z]/', $password) || !preg_match('/[0-9]/', $password)) {
         echo '<script>alert("Password must be at least 8 characters long and contain both letters and numbers."); window.location.replace("editProfileStudent.php");</script>';
