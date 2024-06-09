@@ -20,7 +20,6 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 10px;
 }
 
 .chat-button {
@@ -72,10 +71,13 @@ button {
 }
 
 .card .chat-button:hover {
-  opacity: 0.8;
-  background-color: green;
+  background-color: #4fc94d; /*hijau*/
 }
 
 i{
   margin-right: 10px;
+}
+
+.card.button .refresh{
+  margin-bottom: 20px;
 }

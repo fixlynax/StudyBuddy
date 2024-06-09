@@ -125,6 +125,17 @@ span1{
     font-size: 15px;
 }
 
+.card .view-button {
+  margin-right: 8px;
+  width: 70%;
+}
+
+.card .download-button {
+  margin-right: 6px;
+  width: 70%;
+}
+
+
 .card .rate-button {
   display: inline-block;
   padding: 10px 30px;
@@ -297,6 +308,29 @@ img {
 .headerChatbox{
   color:#000000;
   margin-bottom: 5px;
+}
+
+.card.resource .searchTable{
+  border-top: #fff;
+}
+
+.searchTable table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.searchTable td, .searchTable th {
+    margin-right: 2px;
+    text-align: left;
+    border: none;
+}
+
+.searchTable td {
+    border-bottom: 1px solid #ddd;
+}
+
+.searchTable tr:last-child td {
+    border-bottom: none;
 }
 
 /* ------------------------- */

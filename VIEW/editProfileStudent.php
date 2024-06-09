@@ -16,7 +16,7 @@
         <aside class="side_bar">
             <div class="title">
                 <div class="logo">StudyBuddy</div>
-                <label class=" button cancel" for="check"><i class="fas fa-times"></i></label>
+                <label class="button cancel" for="check"><i class="fas fa-times"></i></label>
             </div>
             <ul>
                 <?php
@@ -63,27 +63,27 @@
                         <h2>Edit Profile</h2>
                         <labelP for="pictureIssue">Profile Image</labelP>
                         <input type="file" id="pictureIssue" name="pictureIssue" accept="image/*">
-        
+
                         <labelP for="name">Name</labelP>
                         <input type="text" id="name" name="name" value="<?php echo $row['stdName']; ?>" required>
-        
-                        <labelp for="matric">Matric</labelp>
+
+                        <labelP for="matric">Matric</labelP>
                         <input type="text" id="matric" name="matric" value="<?php echo $row['stdMatric']; ?>" required>
-        
+
                         <labelP for="email">Email</labelP>
                         <input type="email" id="email" name="email" value="<?php echo $row['stdEmail']; ?>" required>
-        
+
                         <div class="password-container">
                             <labelP for="password">Password</labelP>
                             <div class="input-group">
-                                <input type="password" id="password" name="password" value="<?php echo $row['stdPassword']; ?>"
-                                    required>
+                                <input type="password" id="password" name="password"
+                                    value="<?php echo $row['stdPassword']; ?>" required>
                                 <span class="toggle-password" onclick="togglePassword()">
                                     <i class="fas fa-eye" id="toggleIcon"></i>
                                 </span>
                             </div>
                         </div>
-        
+
                         <labelP for="course">Course</labelP>
                         <select id="course" name="course" required>
                             <?php
@@ -96,9 +96,11 @@
                         </select>
 
                         <labelP for="major">Major</labelP>
-                        <input type="text" id="major" name="major" value="<?php echo $row['stdMajor']; ?>" required>
+                        <select id="major" name="major" required>
+                    <!-- Options will be populated dynamically -->
+                        </select>
         
-                        <labelP for="cgpa">CGPA</labelP>
+                <labelP for="cgpa">CGPA</labelP>
                         <input type="text" id="cgpa" name="cgpa" value="<?php echo $row['stdCGPA']; ?>" required>
         
                         <button type="submit" name="edit" class="save-button">Save</button>
@@ -109,6 +111,61 @@
     </section>
     <script src="JS/sidebar.js"></script>
     <script>
+        const majors = {
+            "Faculty Computing": [
+                "Software Engineering",
+                "Networking",
+                "Graphic And Multimedia",
+                "Cyber Security"
+            ],
+            "Faculty Electrical": [
+                "Electronics",
+                "Electrical",
+                "Power & Machine",
+                "Computer System",
+                "Electrical Systems Maintenance",
+                "Industrial Electronic Automation",
+                "Electrical Engineering"
+            ],
+            "Faculty Mechanical": [
+                "Mechanical Engineering",
+                "Automotive",
+                "Oil And Gas",
+                "Design And Analysis",
+                "Welding"
+            ]
+        };
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const courseSelect = document.getElementById('course');
+            const majorSelect = document.getElementById('major');
+
+            courseSelect.addEventListener('change', function () {
+                updateMajors();
+            });
+
+            // Populate majors based on the initially selected course
+            updateMajors();
+
+            function updateMajors() {
+                const selectedCourse = courseSelect.value;
+                majorSelect.innerHTML = ''; // Clear existing options
+
+                if (majors[selectedCourse]) {
+                    majors[selectedCourse].forEach(major => {
+                        const option = document.createElement('option');
+                        option.value = major;
+                        option.textContent = major;
+                        majorSelect.appendChild(option);
+                    });
+
+                    // Set the previously selected major
+                    const selectedMajor = "<?php echo $row['stdMajor']; ?>";
+                    majorSelect.value = selectedMajor;
+                }
+            }
+        });
+
         function togglePassword() {
             const passwordInput = document.getElementById('password');
             const toggleIcon = document.getElementById('toggleIcon');

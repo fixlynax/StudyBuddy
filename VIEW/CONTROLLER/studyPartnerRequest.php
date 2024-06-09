@@ -38,7 +38,7 @@ $result = $stmt->get_result();
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo "<tr>
-                <td><img src='" . $row['stdPicture'] . "' alt='Profile Picture'></td>
+                <td style='text-align:center;'><img src='" . $row['stdPicture'] . "' alt='Profile Picture'></td>
                 <td>" . $row['stdName'] . "</td>
                 <td>" . $row['stdMatric'] . "</td>
                 <td>" . $row['subjectName'] . "</td>

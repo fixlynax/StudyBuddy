@@ -54,6 +54,7 @@
                                     <th>Picture</th>
                                     <th>Name</th>
                                     <th>Matrix No</th>
+                                    <th>CGPA</th>
                                     <th>Subject Study</th>
                                     <th>Description Study</th>
                                     <th>Available Date</th>
@@ -61,7 +62,7 @@
                                 </tr>
                             </thead>
                             <tbody id="partner-list">
-                                <tr><td colspan='7'>Please find partner by select the subject</td></tr>
+                                <tr><td colspan='8'>Please find partner by select the subject</td></tr>
                                 <!-- Partner list will be populated here by JavaScript -->
                             </tbody>
                         </table>

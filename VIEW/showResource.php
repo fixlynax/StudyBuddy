@@ -41,7 +41,7 @@
                 <table>
                     <tr>
                         <th>Topic Name</th>
-                        <th>Course</th>
+                        <th>Category</th>
                         <th>Description</th>
                         <th>Upload Date</th>
                         <th>Action</th>

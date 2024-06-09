@@ -50,14 +50,27 @@ include "./CONTROLLER/popupName.php";
                 </div>
                 <div class="card resource">
                     <a>Resource</a>
-                    <labelD for="searchTopic">Search by topic name:</labelD>
-                    <input type="text" id="searchTopic" placeholder="Enter topic name" onkeyup="searchByTopic()">
-                    <!-- <button class="button search" onclick="searchByTopic()">Search</button> -->
+                    <div class="searchTable">
+                        <table>
+                            <tr>
+                                <td>
+                                    <labelD for="searchCategory">Search by topic category:</labelD>
+                                    <input type="text" id="searchCategory" name="searchCategory"
+                                        placeholder="Enter category to search.." onkeyup="searchByCategory()">
+                                </td>
+                                <td>
+                                    <labelD for="searchCategory">Search by topic name:</labelD>
+                                    <input type="text" id="searchTopic" placeholder="Enter topic name"
+                                        onkeyup="searchByTopic()">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                     <table id="resourceTable" class="table">
 
                         <tr>
                             <th>Topic Name</th>
-                            <th>Course</th>
+                            <th>Category</th>
                             <th>Description</th>
                             <th>Upload Date</th>
                             <th>Action</th>
@@ -73,6 +86,7 @@ include "./CONTROLLER/popupName.php";
     </section>
     <script src="JS/sidebar.js"></script>
     <script src="JS/searchByTopicName.js"></script>
+    <script src="JS/searchByCategory.js"></script>
     <script>
         function updatePartnerRequest(studyPartnerID, action) {
             fetch('updatePartnerRequest.php', {

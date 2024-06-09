@@ -36,10 +36,20 @@ if (isset($_POST['signup'])) {
             // Insert the new user into the database
             $sql_insert = "INSERT INTO student (stdName, stdEmail, stdPassword, userType, stdOnline, stdAccDate, stdStatusAcc) VALUES ('$name', '$email', '$password', '$userType', '$stdOnline', '$currentDateStr', '$stdStatusAcc')";
             if (mysqli_query($conn, $sql_insert)) {
-                // Sign up successful
-                echo '<script>alert("Sign up successful. Please sign in to start the journey."); window.location.replace("loginRegister.php");</script>';
+                // Get the student ID of the newly inserted student
+                $studentID = mysqli_insert_id($conn);
+
+                // Insert into the rating table with pointRating set to 0
+                $sql_insert_rating = "INSERT INTO rating (studentID, pointRating) VALUES ('$studentID', 0)";
+                if (mysqli_query($conn, $sql_insert_rating)) {
+                    // Sign up successful
+                    echo '<script>alert("Sign up successful. Please sign in to start the journey."); window.location.replace("loginRegister.php");</script>';
+                } else {
+                    // Error handling for rating table insertion failure
+                    echo "Error: " . $sql_insert_rating . "<br>" . mysqli_error($conn);
+                }
             } else {
-                // Error handling for database insertion failure
+                // Error handling for student table insertion failure
                 echo "Error: " . $sql_insert . "<br>" . mysqli_error($conn);
             }
         }

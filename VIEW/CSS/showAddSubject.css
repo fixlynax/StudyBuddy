@@ -53,13 +53,13 @@
 .card th,
 .card td {
   padding: 10px;
-  text-align: center;
+  text-align: left;
   border: 2px solid #000000;
 }
 
 .card th:first-child,
 .card td:first-child {
-  width: 100px; /* Adjust as needed for image column width */
+  width: auto; /* Adjust as needed for image column width */
 }
 
 .card button.delete-button {

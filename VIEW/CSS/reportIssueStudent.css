@@ -78,3 +78,15 @@ table th, table td {
   color: red;
   font-weight: bold;
 }
+
+.table-actions a {
+    color: #66B1F1; /* Red color for delete icon */
+    text-decoration: none;
+    font-size: 18px; /* Adjust the size as needed */
+    margin: 0 5px; /* Add some margin for spacing */
+    transition: color 0.3s ease;
+}
+
+.table-actions a:hover {
+    color: #ff0000; /* Darker red on hover */
+}

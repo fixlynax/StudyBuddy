@@ -1,6 +1,4 @@
-<?php
-include './MODEL/connect.php';
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
@@ -35,27 +33,26 @@ include './MODEL/connect.php';
         <article class="content">
             <div class="padding-container">
                 <div class="card">
-                <h2>List Study Partner</h2>
-                <labelP for="subjectSearch">Search by subject</labelP>
-                <input type="text" id="subjectSearch" name="subjectSearch" placeholder="Enter subject study to serach..">
-                <button class="find-button">Find</button>
-
-                <table>
-                    <tr>
-                    <th>Image</th>
-                    <th>Name</th>
-                    <th>Matrix No</th>
-                    <th>Subject Study</th>
-                    <th>Description Study</th>
-                    <th>Available Date</th>
-                    </tr>
-                    <?php include './CONTROLLER/showAcceptPartner.php'; ?>
-                </table>
+                    <h2>List Study Partner</h2>
+                    <labelP for="subjectSearch">Search by subject</labelP>
+                    <input type="text" id="subjectSearch" name="subjectSearch" placeholder="Enter subject study to search.." onkeyup="searchSubjects()">
+                    <table>
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Matrix No</th>
+                            <th>Subject Study</th>
+                            <th>Description Study</th>
+                            <th>Available Date</th>
+                        </tr>
+                        <?php include './CONTROLLER/showAcceptPartner.php'; ?>
+                    </table>
                 </div>
             </div>
         </article>
     </section>
     <script src="JS/sidebar.js"></script>
+    <script src="JS/searchPartnerSubject.js"></script>
 </body>
 
 </html>

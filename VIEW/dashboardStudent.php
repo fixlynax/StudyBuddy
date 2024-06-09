@@ -87,14 +87,14 @@ include "./CONTROLLER/popupName.php";
                             if ($result->num_rows > 0) {
                                 while ($row = $result->fetch_assoc()) {
                                     echo "<tr>
-                        <td>{$row['studyGroupName']}</td>
-                        <td>{$row['studyGroupType']}</td>
-                        <td>{$row['subjectName']}</td>
-                        <td>{$row['studyGroupDescription']}</td>
-                        <td>{$row['studyGroupDate']} - {$row['studyGroupTime']}</td>
-                        <td>{$row['stdName']}</td>
-                        <td style='text-align:center;'><button class='rate-button' data-id='{$row['studyGroupID']}' data-partner-id='{$row['studyGroupPartner']}' data-partner-name='{$row['stdName']}'>Rate</button></td>
-                    </tr>";
+                                            <td>{$row['studyGroupName']}</td>
+                                            <td>{$row['studyGroupType']}</td>
+                                            <td>{$row['subjectName']}</td>
+                                            <td>{$row['studyGroupDescription']}</td>
+                                            <td>{$row['studyGroupDate']} - {$row['studyGroupTime']}</td>
+                                            <td>{$row['stdName']}</td>
+                                            <td style='text-align:center;'><button class='rate-button' data-id='{$row['studyGroupID']}' data-partner-id='{$row['studyGroupPartner']}' data-partner-name='{$row['stdName']}'>Rate</button></td>
+                                        </tr>";
                                 }
                             } else {
                                 echo "<tr><td colspan='7'>No data found</td></tr>";
@@ -107,14 +107,26 @@ include "./CONTROLLER/popupName.php";
                 </div>
                 <div class="card resource">
                     <a>Resource</a>
-                    <labelD for="searchTopic">Search by topic name:</labelD>
-                    <input type="text" id="searchTopic" placeholder="Enter topic name" onkeyup="searchByTopic()">
-                    <!-- <button class="button search" onclick="searchByTopic()">Search</button> -->
+                    <div class="searchTable">
+                        <table>
+                            <tr>
+                                <td>
+                                    <labelD for="searchCategory">Search by topic category:</labelD>
+                                    <input type="text" id="searchCategory" name="searchCategory"
+                                        placeholder="Enter category to search.." onkeyup="searchByCategory()">
+                                </td>
+                                <td>
+                                    <labelD for="searchCategory">Search by topic name:</labelD>
+                                    <input type="text" id="searchTopic" placeholder="Enter topic name"
+                                        onkeyup="searchByTopic()">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                     <table id="resourceTable" class="table">
-
                         <tr>
                             <th>Topic Name</th>
-                            <th>Course</th>
+                            <th>Category</th>
                             <th>Description</th>
                             <th>Upload Date</th>
                             <th>Action</th>
@@ -122,7 +134,6 @@ include "./CONTROLLER/popupName.php";
 
                         <!-- Table rows will be populated dynamically -->
                         <?php include "./CONTROLLER/showResourceDashboardHandler.php"; ?>
-
                     </table>
                 </div>
             </div>
@@ -165,6 +176,7 @@ include "./CONTROLLER/popupName.php";
     <script src="JS/sidebar.js"></script>
     <script src="JS/dateTime.js"></script>
     <script src="JS/searchByTopicName.js"></script>
+    <script src="JS/searchByCategory.js"></script>
     <script src="JS/chatbox.js"></script>
     <script src="JS/updatePartnerRequest.js"></script>
     <script>

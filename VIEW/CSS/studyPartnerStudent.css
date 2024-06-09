@@ -52,10 +52,16 @@
       color: inherit; 
     }
 
-.study-partner-card .add-subject-button:hover,
-.study-partner-card .find-partner-button:hover,
+.study-partner-card .add-subject-button:hover {
+    background-color: #2048cd; /*biru*/
+}
+
+.study-partner-card .find-partner-button:hover {
+    background-color: #4fc94d; /*hijau*/
+}
+
 .study-partner-card .show-partner-button:hover {
-    background-color: #4D9EDC;
+    background-color: #2048cd; /*biru*/
 }
 
 .study-partner-card .subject-form label,
@@ -108,5 +114,5 @@
 }
 
 .study-partner-card .partner-table-container td .action-button:hover {
-    background-color: #4D9EDC;
+    background-color: #4fc94d; /*hijau*/
 }

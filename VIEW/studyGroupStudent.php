@@ -64,8 +64,8 @@
             </select>
             <input type="hidden" id="studySubjectID" name="studySubjectID" required>
 
-            <button type="submit" class="submit-button" style="background-color: #66b1f1;">Submit</button>
-            <button class="show-button" style="background-color: #66b1f1;">
+            <button type="submit" class="submit-button">Submit</button>
+            <button class="show-button">
             <a href="showStudyGroup.php">Show Study Group</a>
           </button>
           </form>

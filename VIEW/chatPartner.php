@@ -35,11 +35,10 @@
             <div class="padding-container">
                 <div class="card">
                     <h2>List Partner</h2>
-                    <button onclick="refreshTable()"><i class='fas fa-redo'></i>Refresh</button>
+                    <button id="refreshButton" style="margin-bottom: 10px;"><i class='fas fa-redo'></i>Refresh</button>
                     <table>
                         <tr>
                             <th>Name</th>
-                            <!-- <th>Status</th> -->
                             <th colspan='2'>Chat</th>
                         </tr>
                         <?php
@@ -51,7 +50,7 @@
                                     echo "<tr>
                                             <td>{$row['stdName']}</td>
                                             <td class='{$statusClass}'>{$row['stdOnline']}</td>
-                                            <td><button class='chat-button' onclick='startChat({$row['stdID']})'><i class='fas fa-comment'></i> Chat</button></td>
+                                            <td style='width:120px;'><button class='chat-button' onclick='startChat({$row['stdID']})'><i class='fas fa-comment'></i> Chat</button></td>
                                           </tr>";
                                 }
                             }
@@ -69,9 +68,14 @@
             }
 
             function refreshTable() {
-                // Add code here to refresh the table
-                location.reload(); // This reloads the entire page
+                location.reload();
             }
+
+            // Auto-refresh every 5 seconds
+            setInterval(refreshTable, 5000);
+
+            // Button click event
+            document.getElementById('refreshButton').addEventListener('click', refreshTable);
         </script>
         <?php
         $stmt->close();

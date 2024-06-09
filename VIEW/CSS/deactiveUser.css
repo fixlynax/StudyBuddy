@@ -52,7 +52,7 @@ button {
 }
 
 button.active:hover {
-    background-color: green; /* Change text color to red on hover */
+    background-color: #4fc94d; /*hijau*/ 
 }
 
 button.Deactivate:hover {

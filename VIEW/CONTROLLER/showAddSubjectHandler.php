@@ -23,7 +23,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo "<td>{$row['subjectName']}</td>";
     echo "<td>{$row['descriptionStudy']}</td>";
     echo "<td>{$row['scheduleStudy']}</td>";
-    echo "<td><button class='delete-button' onclick='confirmDelete({$row['studySubjectID']})'><i style='margin-right:5px' class='fa fa-trash'></i> Delete</button></td>";
+    echo "<td style='text-align:center'><button class='delete-button' onclick='confirmDelete({$row['studySubjectID']})'><i style='margin-right:5px' class='fa fa-trash'></i> Delete</button></td>";
     echo "</tr>";
 }
 

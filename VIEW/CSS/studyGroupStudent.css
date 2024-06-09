@@ -1,23 +1,20 @@
-/* CSS for Create Study Group card */
-
 .card {
-  width: 100%;
-  background-color: #f0f0f0;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  background-color: #f7f7f7;
   border: 2px solid #000000;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 .card h2 {
   margin-bottom: 10px;
-  color: #66B1F1;
+  color: #66b1f1;
 }
 
 .card labelS {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   font-weight: bold;
 }
 
@@ -27,16 +24,18 @@
 .card input[type="date"],
 .card input[type="time"] {
   width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 2px solid #66b1f1;
-  border-radius: 5px;
-  font-size: 16px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 2px solid #66B1F1;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
 }
 
 .card .submit-button,
 .card .show-button {
   border: none;
+  background: #66b1f1;
   margin-top: 10px;
   padding: 10px 30px;
   border-radius: 5px;
@@ -45,20 +44,15 @@
   font-size: 16px;
 }
 
-.card .show-button a {
-    text-decoration: none; 
-    color: inherit; 
+a {
+  text-decoration: none;
+  color: #fff;
 }
 
-.card .submit-button {
-  background-color: #66b1f1;
+.submit-button:hover {
+  background-color: #4fc94d; /*hijau*/
 }
 
-.card .show-button {
-  background-color: #66b1f1;
-}
-
-.card .submit-button:hover,
 .card .show-button:hover {
-  opacity: 0.8;
+  background-color: #2048cd; /*biru*/
 }

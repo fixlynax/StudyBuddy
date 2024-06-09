@@ -2,45 +2,49 @@
 session_start();
 include './MODEL/connect.php';
 
+// Ensure the user is logged in
+if (!isset($_SESSION['stdID'])) {
+    header("Location: loginRegister.php");
+    exit();
+}
+
 $sessionID = $_SESSION['stdID'];
 
+// Fetch accepted study partners for the logged-in user
 $sql = "SELECT 
-            student.stdPicture, 
-            student.stdName, 
-            student.stdMatric, 
-            studysubject.subjectName, 
-            studysubject.descriptionStudy, 
-            studysubject.scheduleStudy, 
-            studypartner.studyPartnerID,
-            studypartner.studyPartnerWith
+            student.stdPicture,
+            student.stdName,
+            student.stdMatric,
+            studysubject.subjectName,
+            studysubject.descriptionStudy,
+            studysubject.scheduleStudy
         FROM 
             studypartner
         INNER JOIN 
-            student 
+            student
         ON 
-            studypartner.studyPartnerBy = student.stdID 
+            student.stdID = studypartner.studyPartnerWith
         INNER JOIN 
-            studysubject 
+            studysubject
         ON 
-            studypartner.studyPartnerSubject = studysubject.studySubjectID 
+            studysubject.studySubjectID = studypartner.studyPartnerSubject
         WHERE 
-            studypartner.studyPartnerWith = ? 
+            studypartner.studyPartnerBy = ?
         AND 
-            studypartner.studyPartnerBy != ? 
-        AND 
-            studypartner.studyPartnerAction = 'Accepted'
-        ORDER BY 
-            studysubject.scheduleStudy DESC";
+            studypartner.studyPartnerAction = 'Accepted'";
 
 $stmt = $conn->prepare($sql);
-$stmt->bind_param('ii', $sessionID, $sessionID);
+if (!$stmt) {
+    echo "Prepare failed: (" . $conn->errno . ") " . $conn->error;
+}
+$stmt->bind_param('i', $sessionID);
 $stmt->execute();
 $result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo "<tr>
-                <td><img src='" . $row['stdPicture'] . "' alt='Profile Picture' class='rounded-image'></td>
+                <td><img src='" . $row['stdPicture'] . "' alt='Profile Picture'></td>
                 <td>" . $row['stdName'] . "</td>
                 <td>" . $row['stdMatric'] . "</td>
                 <td>" . $row['subjectName'] . "</td>
@@ -49,7 +53,7 @@ if ($result->num_rows > 0) {
               </tr>";
     }
 } else {
-    echo "<tr><td colspan='7'>No partner accepted available</td></tr>";
+    echo "<tr><td colspan='6'>No accepted study partners available</td></tr>";
 }
 
 $stmt->close();

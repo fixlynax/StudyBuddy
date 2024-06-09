@@ -45,15 +45,19 @@
     background-color: #66b1f1;
     color: #fff;
     border: none;
-    padding: 10px 30px;
+    padding: 11px 30px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 15px;
     text-decoration: none;
 }
 
+.card .show-button:hover {
+    background-color: #2048cd; /*biru*/
+}
+
 .card button.add-button:hover {
-    background-color: #4d8ac9;
+    background-color: #4fc94d; /*hijau*/
 }
 
 /* Styles for sidebar and other elements */

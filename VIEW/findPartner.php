@@ -12,22 +12,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 student.stdPicture, 
                 student.stdName, 
                 student.stdMatric, 
+                student.stdCGPA,
                 studysubject.subjectName, 
                 studysubject.descriptionStudy, 
                 studysubject.scheduleStudy, 
-                studysubject.studySubjectID 
+                studysubject.studySubjectID,
+                COALESCE(rating.pointRating, 0) AS pointRating
             FROM 
                 student 
             INNER JOIN 
                 studysubject 
             ON 
                 student.stdID = studysubject.subjectBy 
+            LEFT JOIN 
+                rating 
+            ON 
+                student.stdID = rating.studentID
             WHERE 
                 studysubject.subjectName = ? 
             AND 
                 studysubject.subjectBy != ? 
             AND 
-                studysubject.scheduleStudy >= ?";
+                studysubject.scheduleStudy >= ?
+            ORDER BY 
+                student.stdCGPA DESC, 
+                pointRating DESC";
 
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
@@ -41,10 +50,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         while ($row = $result->fetch_assoc()) {
             echo "<tr>
                     <td><img src='" . $row['stdPicture'] . "' alt='Profile Picture'></td>
-                    <td>" . $row['stdName'] . "</td>
+                    <td style='text-align:left;'>" . $row['stdName'] . ' [ Rating : ' .$row['pointRating'] . ']' ."</td>
                     <td>" . $row['stdMatric'] . "</td>
                     <td>" . $row['subjectName'] . "</td>
-                    <td>" . $row['descriptionStudy'] . "</td>
+                    <td>" . $row['stdCGPA'] . "</td>
+                    <td style='text-align:left;'>" . $row['descriptionStudy'] . "</td>
                     <td>" . $row['scheduleStudy'] . "</td>
                     <td>
                         <form method='POST' action='requestPartner.php'>
@@ -56,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                   </tr>";
         }
     } else {
-        echo "<tr><td colspan='7'>No partners available</td></tr>";
+        echo "<tr><td colspan='9'>No partners available</td></tr>";
     }
 
     $stmt->close();

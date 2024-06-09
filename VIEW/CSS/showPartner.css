@@ -21,6 +21,14 @@
   font-weight: bold;
 }
 
+.card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 5px;
+    border: 2px solid #000000;
+}
+
 .card input[type="text"] {
   width: 100%;
   padding: 8px;
@@ -42,7 +50,7 @@
 }
 
 .card button.find-button:hover {
-  background-color: #4d8ac9;
+  background-color: #4fc94d; /*hijau*/
 }
 
 .card table {
@@ -52,7 +60,7 @@
 
 .card th,
 .card td {
-  padding: 10px;
+  padding: 8px;
   text-align: center;
   border: 2px solid #000000;
 }

@@ -16,7 +16,7 @@ if (!isset($_SESSION['stdID'])) {
 $reportBy = $_SESSION['stdID'];
 
 // Fetch the report issues from the database filtered by session ID
-$sql = "SELECT reportType, reportDescription, reportDate, reportStatus FROM reportissue WHERE reportBy = '$reportBy'";
+$sql = "SELECT reportIssueID, reportType, reportDescription, reportDate, reportStatus FROM reportissue WHERE reportBy = '$reportBy'";
 $result = mysqli_query($conn, $sql);
 
 // Check if there are any results
@@ -38,10 +38,15 @@ if (mysqli_num_rows($result) > 0) {
             $statusClass = 'status-onhold';
         }
         echo "<td class='" . $statusClass . "'>" . $row['reportStatus'] . "</td>";
+        if ($row['reportStatus'] == 'Pending') {
+            echo "<td style='text-align: center;' class='table-actions'><a href='deleteReportIssueHandler.php?id=" . $row['reportIssueID'] . "' onclick=\"return confirm('Are you sure you want to delete this report?');\"><i class='fas fa-trash-alt'></i></a></td>";
+        } else {
+            echo "<td></td>";
+        }
         echo "</tr>";
     }
 } else {
-    echo "<tr><td colspan='4'>No report issues found.</td></tr>";
+    echo "<tr><td colspan='5'>No report issues found.</td></tr>";
 }
 
 // Close the database connection

@@ -169,3 +169,25 @@ img {
   color: red;
 }
 
+.card.resource .searchTable{
+  border-top: #fff;
+}
+
+.searchTable table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.searchTable td, .searchTable th {
+    margin-right: 2px;
+    text-align: left;
+    border: none;
+}
+
+.searchTable td {
+    border-bottom: 1px solid #ddd;
+}
+
+.searchTable tr:last-child td {
+    border-bottom: none;
+}

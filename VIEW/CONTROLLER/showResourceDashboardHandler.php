@@ -1,6 +1,4 @@
 <?php
-// session_start();
-
 // Include the database connection file
 include "./MODEL/connect.php";
 
@@ -17,7 +15,7 @@ if (mysqli_num_rows($result) > 0) {
         echo "<td>{$row['descResource']}</td>";
         echo "<td>{$row['dateResource']}</td>";
         echo "<td style='text-align: center;'>";
-        echo '<a href="' . $row['fileResource'] . '" target="_blank" class="view-button" style="margin-right: 8px;"><i class="fas fa-eye"></i></a>';
+        echo '<a href="' . $row['fileResource'] . '" target="_blank" class="view-button"><i class="fas fa-eye"></i></a>';
         echo "<a href='downloadFile.php?file={$row['fileResource']}' class='download-button'><i class='fas fa-download'></i></a>";
         echo "</td>";
         echo "</tr>";
