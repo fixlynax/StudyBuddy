@@ -52,9 +52,30 @@
               <!-- Options will be populated by JavaScript -->
             </select>
             <labelD style="margin-top:10px" for="description" class="des-label">Description</labelD>
-            <textarea id="description" name="description" rows="4" placeholder="Enter description for reason.."></textarea>
+            <textarea id="description" name="description" rows="4"
+              placeholder="Enter description for reason.."></textarea>
           </div>
           <button class="Deactivate" id="deactivateButton">Deactivate</button>
+        </div>
+        <div class="card" style="margin-top: 20px;">
+          <h3>List Deactivate User</h3>
+          <div class="form-group">
+            <table id="deactivateUsersTable">
+              <thead>
+                <tr>
+                  <th>Picture</th>
+                  <th>Name</th>
+                  <th>Matric</th>
+                  <th>Email</th>
+                  <th>Status</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php include './CONTROLLER/listDeactivateUsersHandler.php'; ?>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </article>
