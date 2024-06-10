@@ -28,18 +28,17 @@
                 <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
         </aside>
-        <?php
-        include 'getPartnerStatus.php'
-            ?>
+        <?php include 'getPartnerStatus.php'; ?>
         <article class="content">
             <div class="padding-container">
                 <div class="card">
                     <h2>List Partner</h2>
-                    <button id="refreshButton" style="margin-bottom: 10px;"><i class='fas fa-redo'></i>Refresh</button>
+                    <button id="refreshButton" style="margin-bottom: 10px;"><i class='fas fa-redo'></i> Refresh</button>
                     <table>
                         <tr>
                             <th>Name</th>
-                            <th colspan='2'>Chat</th>
+                            <th>Status</th>
+                            <th>Chat</th>
                         </tr>
                         <?php
                         if ($result->num_rows > 0) {

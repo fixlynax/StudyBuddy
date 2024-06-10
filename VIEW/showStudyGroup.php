@@ -51,7 +51,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php include './CONTROLLER/showStudyGroup.php'; ?>
+                            <?php include './CONTROLLER/showStudyGroup2.php'; ?>
                         </tbody>
                     </table>
                 </div>

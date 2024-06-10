@@ -27,13 +27,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $sql = "INSERT INTO studygroup 
-            (studyGroupName, studyGroupType, studyGroupDescription, studyGroupTime, studyGroupDate, studyGroupPartner, studyGroupSubject, studyGroupStatus) 
+            (studyGroupName, studyGroupType, studyGroupDescription, studyGroupTime, studyGroupDate, studyGroupPartner, studyGroupSubject, studyPartnerBy, studyGroupStatus) 
             VALUES 
-            (?, ?, ?, ?, ?, ?, ?, 'Pending')";
+            (?, ?, ?, ?, ?, ?, ?, ?, 'Pending')";
 
     $stmt = $conn->prepare($sql);
     if ($stmt) {
-        $stmt->bind_param('sssssii', $studyGroupName, $typeStudyGroup, $description, $time, $date, $studyPartner, $studySubjectID);
+        $stmt->bind_param('sssssiii', $studyGroupName, $typeStudyGroup, $description, $time, $date, $studyPartner, $studySubjectID, $sessionID);
 
         if ($stmt->execute()) {
             echo "<script>
